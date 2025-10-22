@@ -17,7 +17,8 @@
         font-family: "Poppins", sans-serif;
         line-height: 1.6;
         color: var(--dark);
-        background-color: var(--light);
+        background: url("https://images.unsplash.com/photo-1743167150074-4fe3fd1cd2b6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kJTIwZm9yJTIwYSUyMGJyYW5kaW5nJTIwY29tcGFueXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=700")
+          no-repeat center center/cover;
         overflow-x: hidden;
       }
 
@@ -190,7 +191,7 @@
       .page-hero {
         height: 60vh;
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-          url("https://images.unsplash.com/photo-1565688840395-37f27d1e7a9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80");
+          url("https://media.istockphoto.com/id/2191708204/photo/3d-render-branding-elements-color-wheel-logo-concepts-tablet-with-design-software-keyboard.webp?a=1&b=1&s=612x612&w=0&k=20&c=uQ8M75oSGBhuMe8ccb5rkTCy5tLt0vYd7c9EtLkbwA0=");
         background-size: cover;
         background-position: center;
         display: flex;
@@ -427,8 +428,8 @@
 
       /* CTA Section */
       .cta-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-          url("https://images.unsplash.com/photo-1587334985589-8cae4bf5564f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80");
+        background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.678)),
+          url("https://images.unsplash.com/photo-1644483513208-acfc1e358447?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHdlYnNpdGUlMjBiYWNrZ3JvdW5kJTIwZm9yJTIwYSUyMGJyYW5kaW5nJTIwY29tcGFueXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=700");
         background-size: cover;
         background-position: center;
         color: var(--light);

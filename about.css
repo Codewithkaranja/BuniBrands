@@ -189,8 +189,8 @@
       /* Page Hero */
       .page-hero {
         height: 60vh;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-          url("https://images.unsplash.com/photo-1565688534245-05d6daeed6e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80");
+        background: linear-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.7)),
+          url("image/mks.jpg");
         background-size: cover;
         background-position: center;
         display: flex;

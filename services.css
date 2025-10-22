@@ -17,7 +17,8 @@
         font-family: "Poppins", sans-serif;
         line-height: 1.6;
         color: var(--dark);
-        background-color: var(--light);
+       background: url("https://images.unsplash.com/photo-1591586815507-986f682ce852?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTkwfHxicmFuZGluZyUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=700")
+          no-repeat center center/cover;
         overflow-x: hidden;
       }
 
@@ -190,7 +191,7 @@
       .page-hero {
         height: 60vh;
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-          url("https://images.unsplash.com/photo-1565688840395-37f27d1e7a9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80");
+          url("https://media.istockphoto.com/id/1400557658/photo/brand-management-branding-or-rebranding-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=MssMy9oLZMz3wd42orPMp0232p3pxlwpUOlTDIUKGPI=");
         background-size: cover;
         background-position: center;
         display: flex;
@@ -397,7 +398,7 @@
       /* CTA Section */
       .cta-section {
         background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-          url("https://images.unsplash.com/photo-1587334985589-8cae4bf5564f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80");
+          url("https://media.istockphoto.com/id/1400557658/photo/brand-management-branding-or-rebranding-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=MssMy9oLZMz3wd42orPMp0232p3pxlwpUOlTDIUKGPI=");
         background-size: cover;
         background-position: center;
         color: var(--light);
