@@ -939,12 +939,12 @@ header.scrolled {
 @media (max-width: 768px) {
   .logo-image {
     height: 35px;
-  }
+    margin-left: 0;
   
   .footer-logo-image {
     height: 45px;
   }
-}
+}}
 /* ===== MOBILE NAVIGATION STYLES ===== */
 
 /* Hide hamburger on desktop */
