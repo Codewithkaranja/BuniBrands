@@ -65,12 +65,13 @@ function closeMobileMenu() {
 }
 
 // Header Scroll Effect
-window.addEventListener("scroll", () => {
-  const header = document.getElementById("header");
+// Add this JavaScript to make header change on scroll
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('header');
   if (window.scrollY > 100) {
-    header.classList.add("scrolled");
+    header.classList.add('scrolled');
   } else {
-    header.classList.remove("scrolled");
+    header.classList.remove('scrolled');
   }
 });
 

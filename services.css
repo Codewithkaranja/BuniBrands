@@ -112,7 +112,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(26, 26, 26, 0.95);
+  background-color: rgba(243, 242, 242, 0.007);
   transition: var(--transition);
   backdrop-filter: blur(10px); /* Added for modern look */
 }
@@ -131,13 +131,13 @@ header.scrolled {
 
 /* Logo Styles */
 .logo-image {
-  height: 40px;
+  height: 200px;
   width: auto;
   transition: var(--transition);
 }
 
 .footer-logo-image {
-  height: 50px;
+  height: 100px;
   width: auto;
   margin-bottom: 15px;
 }
@@ -767,14 +767,14 @@ footer {
 }
  /* Logo Image Styles */
 .logo-image {
-  height: 100px;
+  height: 200px;
   width: auto;
   transition: all 0.3s ease;
   margin-left: -35px;
 }
 
 .footer-logo-image {
-  height: 50px;
+  height: 100px;
   width: auto;
   margin-bottom: 15px;
 }

@@ -121,89 +121,100 @@
         background-color: var(--primary);
       }
 
-      /* Header & Navigation */
-      header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background-color: rgba(26, 26, 26, 0.95);
-        transition: var(--transition);
-      }
+      /* FIXED HEADER + RESPONSIVE NAV */
+/* ============================= */
 
-      header.scrolled {
-        background-color: var(--dark);
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      }
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+}
 
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-      }
+header.scrolled {
+  background-color: var(--dark);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
 
-      .logo {
-        font-size: 24px;
-        font-weight: 700;
-        color: var(--light);
-      }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
 
-      .logo span {
-        color: var(--primary);
-      }
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--light);
+}
 
-      .nav-links {
-        display: flex;
-      }
+.logo span {
+  color: var(--primary);
+}
 
-      .nav-links li {
-        margin-left: 30px;
-      }
+/* Desktop Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
 
-      .nav-links a {
-        color: var(--light);
-        font-weight: 500;
-        transition: var(--transition);
-        position: relative;
-      }
+.nav-links li {
+  margin-left: 30px;
+}
 
-      .nav-links a:hover {
-        color: gold;
-      }
+.nav-links a {
+  color: var(--light);
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition);
+}
 
-      .nav-links a:after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: gold;
-        transition: var(--transition);
-      }
+.nav-links a:hover {
+  color: var(--secondary);
+}
 
-      .nav-links a:hover:after {
-        width: 100%;
-      }
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  transition: var(--transition);
+}
 
-      .nav-links a.active {
-        color:gold;
-      }
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
 
-      .nav-links a.active:after {
-        width: 100%;
-      }
+.nav-links a.active {
+  color: var(--secondary);
+}
 
-      .hamburger {
-        display: none;
-        cursor: pointer;
-        background: none;
-        border: none;
-        color: var(--light);
-        font-size: 24px;
-      }
+/* Hamburger Menu (Hidden on Desktop) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 8px;
+  transition: var(--transition);
+  z-index: 1100;
+}
+
+.hamburger:hover {
+  color: var(--primary);
+}
 
       /* Page Hero - Animated */
 .page-hero {
@@ -849,7 +860,7 @@
         }
 
         .nav-links {
-          position: fixed;
+          position: sticky;
           top: 70px;
           left: 0;
           width: 100%;
@@ -907,14 +918,14 @@
       
       /* Logo Image Styles */
 .logo-image {
-  height: 100px;
+  height: 200px;
   width: auto;
   transition: all 0.3s ease;
   margin-left: -35px;
 }
 
 .footer-logo-image {
-  height: 50px;
+  height: 100px;
   width: auto;
   margin-bottom: 15px;
 }
@@ -953,92 +964,77 @@
   color: var(--primary);
 }
 
-/* Mobile Styles */
+/* MOBILE NAVIGATION */
+/* ================= */
 @media (max-width: 768px) {
-  /* Show hamburger on mobile */
   .hamburger {
     display: block;
   }
 
-  /* Hide desktop navigation */
-  .nav-links {
-    display: none;
-  }
-
-  /* Mobile menu styles */
   .nav-links {
     position: fixed;
     top: 0;
-    left: 0;
+    right: -100%;
     width: 280px;
     height: 100vh;
-    background: linear-gradient(135deg, var(--dark) 0%, #000000 100%);
+    background: linear-gradient(135deg, var(--dark), #000000);
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
     padding: 100px 30px 30px;
-    transform: translateX(-100%);
-    transition: transform 0.4s ease;
-    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
     gap: 0;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+    transition: right 0.4s ease;
+    z-index: 1050;
   }
 
   .nav-links.active {
-    transform: translateX(0);
-    display: flex;
+    right: 0;
   }
 
   .nav-links li {
-    margin: 0;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .nav-links li:last-child {
-    border-bottom: none;
-  }
-
   .nav-links a {
-    font-size: 1.1rem;
-    padding: 18px 0;
     display: block;
     width: 100%;
-    text-align: left;
-    transition: var(--transition);
+    padding: 18px 0;
     color: var(--light);
+    font-size: 1.1rem;
+    transition: var(--transition);
   }
 
   .nav-links a:hover {
     color: var(--primary);
-    padding-left: 15px;
   }
+}
+
 
   .nav-links a.active {
-    color: var(--primary);
+    color:gold;
     font-weight: 600;
     padding-left: 15px;
   }
 
   /* Menu Overlay */
   .menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 999;
+}
   .menu-overlay.active {
     opacity: 1;
     visibility: visible;
   }
-}
+/* Prevent content from hiding under sticky header */
 
 /* Prevent body scroll when menu is open */
 body.menu-open {
@@ -1047,7 +1043,7 @@ body.menu-open {
 
 /* Ensure header has proper z-index */
 header {
-  position: relative;
+  position: sticky;
   z-index: 1002;
 }
      .hero-tagline {
@@ -1060,3 +1056,6 @@ header {
         color: gold;
         font-weight: 600;
       }
+      .nav-links {
+  z-index: 1060;
+}
