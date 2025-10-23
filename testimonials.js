@@ -72,7 +72,74 @@
 
       window.addEventListener("scroll", checkFade);
       window.addEventListener("load", checkFade);
+// Testimonial Hero Animations
+function createTestimonialParticles() {
+  const particlesContainer = document.createElement('div');
+  particlesContainer.className = 'testimonial-particles';
+  const pageHero = document.querySelector('.page-hero');
+  if (pageHero) {
+    pageHero.appendChild(particlesContainer);
 
+    for (let i = 0; i < 30; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'testimonial-particle';
+      
+      const size = Math.random() * 3 + 1;
+      const posX = Math.random() * 100;
+      const posY = Math.random() * 100;
+      const delay = Math.random() * 8;
+      
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${posX}%`;
+      particle.style.top = `${posY}%`;
+      particle.style.animationDelay = `${delay}s`;
+      
+      particlesContainer.appendChild(particle);
+    }
+  }
+}
+
+// Animated Counter for Trust Indicators
+function animateTrustCounters() {
+  const counters = document.querySelectorAll('.trust-number');
+  
+  counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-count'));
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      counter.textContent = Math.floor(current);
+    }, 16);
+  });
+}
+
+// Initialize testimonial hero animations
+document.addEventListener('DOMContentLoaded', function() {
+  createTestimonialParticles();
+  
+  // Animate trust counters when hero section is in view
+  const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateTrustCounters();
+        heroObserver.unobserve(entry.target);
+      }
+    });
+  });
+  
+  const heroSection = document.querySelector('.page-hero');
+  if (heroSection) {
+    heroObserver.observe(heroSection);
+  }
+});
       // Smooth Scrolling for Anchor Links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
