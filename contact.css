@@ -939,6 +939,7 @@ header.scrolled {
 @media (max-width: 768px) {
   .logo-image {
     height: 35px;
+    
     margin-left: 0;
   
   .footer-logo-image {
