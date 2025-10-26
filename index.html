@@ -3,15 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buni Brands - Kenya's Leading Branding & Printing Agency</title>
+
+    <!-- SEO Meta Tags -->
+    <title>
+      Buni Brands - Kenya's Leading Branding & Printing Agency | Design. Print.
+      Brand.
+    </title>
+    <meta
+      name="description"
+      content="Professional branding & printing services in Kenya. Logo design, business cards, banners, custom printing in Nairobi. Transform your business identity with Buni Brands."
+    />
+    <meta
+      name="keywords"
+      content="branding Kenya, printing services Nairobi, logo design Kenya, business cards Nairobi, graphic design Kenya, printing company Kenya"
+    />
+    <meta name="author" content="Buni Brands" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags (Facebook, Instagram, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bunibrands.co.ke" />
+    <meta
+      property="og:title"
+      content="Buni Brands - Kenya's Leading Branding & Printing Agency"
+    />
+    <meta
+      property="og:description"
+      content="Professional branding & printing services in Kenya. Design. Print. Brand."
+    />
+    <meta
+      property="og:image"
+      content="https://bunibrands.co.ke/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Buni Brands" />
+    <meta property="og:locale" content="en_KE" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bunibrands" />
+    <meta name="twitter:creator" content="@bunibrands" />
+    <meta
+      name="twitter:title"
+      content="Buni Brands - Kenya's Leading Branding & Printing Agency"
+    />
+    <meta
+      name="twitter:description"
+      content="Professional branding & printing services in Kenya. Design. Print. Brand."
+    />
+    <meta
+      name="twitter:image"
+      content="https://bunibrands.co.ke/images/twitter-image.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Buni Brands - Kenya's Leading Branding & Printing Agency"
+    />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Buni Brands",
+        "url": "https://bunibrands.co.ke",
+        "logo": "https://bunibrands.co.ke/buni-logo-white-wordings.png",
+        "description": "Kenya's leading branding, design, and printing agency specializing in logo design, business cards, banners, and custom printing services.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nairobi",
+          "addressRegion": "Nairobi",
+          "addressCountry": "Kenya"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+254-XXX-XXXXXX",
+          "contactType": "customer service",
+          "areaServed": "KE",
+          "availableLanguage": "en"
+        },
+        "sameAs": [
+          "https://www.facebook.com/bunibrands",
+          "https://www.instagram.com/bunibrands",
+          "https://twitter.com/bunibrands"
+        ],
+        "keywords": "branding Kenya, printing services Nairobi, logo design Kenya"
+      }
+    </script>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bunibrands.co.ke" />
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
+    <!-- Favicon Setup -->
+    <link rel="icon" type="image/png" sizes="16x16" href="logo16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="logo32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="logo48.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple180.png" />
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -46,7 +148,13 @@
     <main id="main-content">
       <!-- Hero Section -->
       <!-- Hero Section -->
-      <section class="hero" id="home">
+      <!-- Hero Section -->
+      <section
+        class="hero"
+        id="home"
+        itemscope
+        itemtype="https://schema.org/LocalBusiness"
+      >
         <div class="hero-background">
           <!-- Background Images with Fade Transition -->
           <div class="hero-slides">
@@ -76,19 +184,35 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-          <h1 class="reveal"><span class="highlight">buni</span>Brands</h1>
+          <h1 class="reveal" itemprop="name">
+            <span class="highlight">buni</span>Brands
+          </h1>
           <p class="hero-tagline reveal-delay">
             <span>Design</span> ★ <span>Print</span> ★ <span>Brand</span>
           </p>
-          <!--  <p class="hero-desc reveal-late">
-            Kenya's leading creative agency — transforming bold ideas into
-            <span class="accent">impactful visual experiences</span> through
-            innovative branding and premium printing solutions.
+
+          <!-- ADDED: SEO-optimized description 
+          <p class="hero-desc reveal-late" itemprop="description">
+            Kenya's leading <strong>branding and printing agency</strong> in
+            Nairobi specializing in <strong>large format printing</strong>,
+            <strong>3D signages</strong>, <strong>road signs</strong>, and
+            <strong>custom marketing materials</strong>. Transform your business
+            visibility today.
           </p>-->
 
           <div class="hero-buttons reveal-late">
-            <a href="services.html" class="btn btn-primary">Explore Services</a>
-            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+            <a
+              href="services.html"
+              class="btn btn-primary"
+              aria-label="Explore our branding and printing services"
+              >Explore Services</a
+            >
+            <a
+              href="contact.html"
+              class="btn btn-outline"
+              aria-label="Get a free quote for printing services"
+              >Get a Quote</a
+            >
           </div>
         </div>
 
@@ -246,6 +370,86 @@
           </div>
         </div>
       </section>
+      <!-- Testimonials Preview -->
+      <!-- Testimonials Preview -->
+      <section class="section testimonials">
+        <div class="container">
+          <h2 class="section-title">What Our Clients Say</h2>
+          <div class="testimonial-slider">
+            <div
+              class="testimonial-slide active"
+              itemscope
+              itemtype="https://schema.org/Review"
+            >
+              <p class="testimonial-text" itemprop="reviewBody">
+                "Working with Buni Brands has been seamless from start to
+                finish. Their attention to detail, quick turnaround, and design
+                quality exceeded our expectations. They've become our go-to
+                partner for all our branding needs in Kenya."
+              </p>
+              <h4 class="testimonial-author" itemprop="author">
+                Dr. Mumbi Mwihuri
+              </h4>
+              <p class="testimonial-position" itemprop="worksFor">
+                Head of legal services, Machakos University
+              </p>
+              <div
+                class="testimonial-rating"
+                itemprop="reviewRating"
+                itemscope
+                itemtype="https://schema.org/Rating"
+              >
+                <meta itemprop="ratingValue" content="5" />
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div
+              class="testimonial-slide"
+              itemscope
+              itemtype="https://schema.org/Review"
+            >
+              <p class="testimonial-text" itemprop="reviewBody">
+                "Buni Brands handled our large format printing and 3D signage
+                with great precision. The execution was clean, professional, and
+                delivered right on schedule in Nairobi. We highly recommend
+                their services for any printing needs in Kenya."
+              </p>
+              <h4 class="testimonial-author" itemprop="author">
+                Richard Mwangi
+              </h4>
+              <p class="testimonial-position" itemprop="worksFor">
+                Administrator MiC imaging center
+              </p>
+              <div
+                class="testimonial-rating"
+                itemprop="reviewRating"
+                itemscope
+                itemtype="https://schema.org/Rating"
+              >
+                <meta itemprop="ratingValue" content="5" />
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <div class="slider-dot active"></div>
+            <div class="slider-dot"></div>
+          </div>
+          <div style="text-align: center; margin-top: 40px">
+            <a href="testimonials.html" class="btn btn-secondary"
+              >View All Testimonials</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -328,7 +532,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 Buni Brands. All Rights Reserved.</p>
+          <p>&copy; 2025 buniBrands. All Rights Reserved.</p>
           <p style="margin: 0; font-size: 13px; color: #777">
             Crafted with <span style="color: red">❤</span> by
             <a
@@ -341,7 +545,7 @@
                 font-weight: 500;
               "
             >
-              BuniBrands
+              buniBrands
             </a>
           </p>
         </div>

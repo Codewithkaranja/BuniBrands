@@ -527,7 +527,7 @@ header.scrolled {
       }
 
       .branch-card {
-        background-color: var(--light);
+        background-color: black;
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -557,6 +557,7 @@ header.scrolled {
 
       .branch-content {
         padding: 20px;
+        color: white;
       }
 
       .branch-hours {
@@ -567,13 +568,17 @@ header.scrolled {
 
       .branch-hours h4 {
         margin-bottom: 10px;
-        color: var(--primary);
+        color: white;
       }
 
       .hours-list li {
         display: flex;
         justify-content: space-between;
         margin-bottom: 5px;
+      }
+      #branch-p{
+        color: rgb(8, 84, 197);
+        text-decoration: none;
       }
 
       /* Map Section */
@@ -587,7 +592,7 @@ header.scrolled {
       .map-placeholder {
         width: 100%;
         height: 100%;
-        background: linear-gradient(45deg, var(--gray), #e0e0e0);
+        background: linear-gradient(45deg, black, #e0e0e0);
         display: flex;
         flex-direction: column;
         align-items: center;

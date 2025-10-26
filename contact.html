@@ -1,9 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Buni Brands</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Contact Buni Brands Kenya - Printing & Branding Services in Nairobi</title>
+    <meta name="description" content="Contact Buni Brands Kenya for professional printing & branding services. Call +254790256966, visit our Nairobi, Machakos, Nyahururu branches, or send message online.">
+    <meta name="keywords" content="contact Buni Brands Kenya, printing services Nairobi, branding agency contact, get quote Kenya, visit our branches">
+    <meta name="author" content="Buni Brands">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Contact Buni Brands Kenya - Printing & Branding Services">
+    <meta property="og:description" content="Get in touch with Buni Brands Kenya for professional printing and branding services. Multiple branches in Nairobi, Machakos, Nyahururu.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bunibrands.co.ke/contact.html">
+    <meta property="og:image" content="https://bunibrands.co.ke/images/contact-og.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Buni Brands Kenya">
+    <meta name="twitter:description" content="Professional printing and branding services in Kenya. Contact us for quotes and consultations.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bunibrands.co.ke/contact.html">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="logo16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="logo32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="logo48.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple180.png" />
+
+    <!-- Fonts & Icons -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -12,8 +41,57 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="contact.css" />
-  </head>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Buni Brands Kenya",
+      "description": "Contact information for Buni Brands printing and branding services in Kenya",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Buni Brands",
+        "url": "https://bunibrands.co.ke",
+        "telephone": "+254790256966",
+        "email": "bunibrandskenya@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Raiciri Plaza, 2nd Floor",
+          "addressLocality": "Nairobi CBD",
+          "addressCountry": "Kenya"
+        },
+        "openingHours": [
+          "Mo-Fr 08:00-18:00",
+          "Sa 09:00-16:00"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Printing and Branding Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Large Format Printing"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "3D Signages"
+              }
+            }
+          ]
+        }
+      }
+    }
+    </script>
+</head>
   <body>
     <!-- Header & Navigation -->
     <header id="header">
@@ -56,20 +134,36 @@
       <!-- Contact Section -->
       <section class="section">
         <div class="container">
-          <h2 class="section-titles">Contact Us</h2>
+          <h1 class="section-titles">Contact Us</h1>
           <div class="contact-container">
             <div class="contact-info">
               <div class="contact-item fade-in">
                 <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <!-- <i class="fas fa-map-marker-alt"></i>-->
                 </div>
                 <div class="contact-details">
-                  <h3>Our Locations</h3>
-                  <p>Visit us at any of our branches across Kenya</p>
-                  <p>
-                    <strong>Main Branch:</strong> Raiciri Plaza, 2nd Floor,
-                    Nairobi CBD
-                  </p>
+                  <h2>Our Locations</h2>
+                  <p id="branch-p">
+               <a href="https://maps.app.goo.gl/AdJnytJckeb4W2pd9"> <i
+                  class="fas fa-map-marker-alt"
+                  style="color: var(--primary); margin-right: 8px"
+                ></i>
+                Raiciri Plaza, 2nd Floor, Nairobi CBD</a>
+              </p>
+                <p id="branch-p">
+                <a href="https://maps.app.goo.gl/zTftBSSk2wSiF9Qj8"><i
+                  class="fas fa-map-marker-alt"
+                  style="color: var(--primary); margin-right: 8px"
+                ></i>
+                Shanbad House, Wing C, Machakos Town</a>
+              </p>
+                 <p id="branch-p">
+                <a href="https://maps.app.goo.gl/G5n4P1dZWnE2j29LA"><i
+                  class="fas fa-map-marker-alt"
+                  style="color: var(--primary); margin-right: 8px"
+                ></i>
+                Solana Junction, Nyahururu</a>
+              </p>
                 </div>
               </div>
               <div class="contact-item fade-in">
@@ -77,9 +171,9 @@
                   <i class="fas fa-phone"></i>
                 </div>
                 <div class="contact-details">
-                  <h3>Call Us</h3>
-                  <a href="tel:+254790256966"> <p>+254 790 256 966</p></a>
-                  <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                  <h2>Call Us</h2>
+                  <a href="tel:+254790256966"> <p id="branch-p">+254 790 256 966</p></a>
+                  
                 </div>
               </div>
               <div class="contact-item fade-in">
@@ -87,11 +181,11 @@
                   <i class="fas fa-envelope"></i>
                 </div>
                 <div class="contact-details">
-                  <h3>Email Us</h3>
+                  <h2>Email Us</h2>
                   <a href="mailto:bunibrandskenya@gmail.com">
-                    <p>bunibrandskenya@gmail.com</p></a
+                    <p id="branch-p">bunibrandskenya@gmail.com</p></a
                   >
-                  <p>We respond within an hour</p>
+                 
                 </div>
               </div>
               <div class="contact-item fade-in">
@@ -99,7 +193,7 @@
                   <i class="fas fa-clock"></i>
                 </div>
                 <div class="contact-details">
-                  <h3>Business Hours</h3>
+                  <h2>Business Hours</h2>
                   <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
                   <p><strong>Saturday:</strong> 9:00 AM - 4:00 PM</p>
                   <p><strong>Sunday:</strong> Closed</p>
@@ -108,7 +202,7 @@
             </div>
 
             <div class="contact-form fade-in">
-              <h3>Send Us a Message</h3>
+              <h2>Send Us a Message</h2>
 
               <form
                 id="contactForm"
@@ -188,55 +282,22 @@
     <!-- Branches Section -->
     <section class="section branches-section">
       <div class="container">
-        <h2 class="section-title">Our Branches</h2>
+        <h1 class="section-title">Our Branches</h1>
         <div class="branches-grid">
-          <div class="branch-card fade-in">
-            <div class="branch-image">
-           
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.4210904093225!2d37.263662074047105!3d-1.5163787359189416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f80cde05453c3%3A0xaccc392eba142914!2sF7M8%2BFG3%20Shanbad%20House%2C%20Syokimau%20Ave%2C%20Machakos!5e0!3m2!1sen!2ske!4v1761124060151!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="branch-content">
-              <h3>Machakos Branch</h3>
-              <p>
-                <i
-                  class="fas fa-map-marker-alt"
-                  style="color: var(--primary); margin-right: 8px"
-                ></i>
-                Shanbad House, Wing C, Shop 39, Machakos Town
-              </p>
-              <p>
-                <i
-                  class="fas fa-phone"
-                  style="color: var(--primary); margin-right: 8px"
-                ></i>
-                <a href="tel:+254790256966"> +254 790 256 966</a>
-              </p>
-              <div class="branch-hours">
-                <h4>Opening Hours</h4>
-                <ul class="hours-list">
-                  <li>
-                    <span>Mon - Fri:</span> <span>8:00 AM - 6:00 PM</span>
-                  </li>
-                  <li><span>Saturday:</span> <span>9:00 AM - 4:00 PM</span></li>
-                  <li><span>Sunday:</span> <span>Closed</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="branch-card fade-in">
-            <div class="branch-image">
+           <div class="branch-card fade-in">
+             <div class="branch-image">
              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.817067548682!2d36.8241407749657!3d-1.283636398704164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11517e8d1519%3A0x82861d4bebb6fa29!2sRaiciri%20house!5e0!3m2!1sen!2ske!4v1761124223301!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="branch-content">
+             </div>
+             <div class="branch-content">
               <h3>Nairobi CBD Branch</h3>
-              <p>
-                <i
+              <p id="branch-p">
+               <a href="https://maps.app.goo.gl/AdJnytJckeb4W2pd9"> <i
                   class="fas fa-map-marker-alt"
                   style="color: var(--primary); margin-right: 8px"
                 ></i>
-                Raiciri Plaza, 2nd Floor, Nairobi CBD
+                Raiciri Plaza, 2nd Floor, Nairobi CBD</a>
               </p>
-              <p>
+              <p id="branch-p">
                 <i
                   class="fas fa-phone"
                   style="color: var(--primary); margin-right: 8px"
@@ -257,18 +318,52 @@
           </div>
           <div class="branch-card fade-in">
             <div class="branch-image">
+           
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.4210904093225!2d37.263662074047105!3d-1.5163787359189416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f80cde05453c3%3A0xaccc392eba142914!2sF7M8%2BFG3%20Shanbad%20House%2C%20Syokimau%20Ave%2C%20Machakos!5e0!3m2!1sen!2ske!4v1761124060151!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="branch-content">
+              <h3>Machakos Branch</h3>
+              <p id="branch-p">
+                <a href="https://maps.app.goo.gl/zTftBSSk2wSiF9Qj8"><i
+                  class="fas fa-map-marker-alt"
+                  style="color: var(--primary); margin-right: 8px"
+                ></i>
+                Shanbad House, Machakos Town</a>
+              </p>
+              <p id="branch-p">
+                <i
+                  class="fas fa-phone"
+                  style="color: var(--primary); margin-right: 8px"
+                ></i>
+                <a href="tel:+254790256966"> +254 790 256 966</a>
+              </p>
+              <div class="branch-hours">
+                <h4>Opening Hours</h4>
+                <ul class="hours-list">
+                  <li>
+                    <span>Mon - Fri:</span> <span>8:00 AM - 6:00 PM</span>
+                  </li>
+                  <li><span>Saturday:</span> <span>9:00 AM - 4:00 PM</span></li>
+                  <li><span>Sunday:</span> <span>Closed</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+         
+          <div class="branch-card fade-in">
+            <div class="branch-image">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8179828171287!2d36.362347274038804!3d0.023567564404841302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1787639b3f84ca29%3A0x661f3ae48e73e542!2sSolana%20Junction%20Lounge!5e0!3m2!1sen!2ske!4v1761124474384!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="branch-content">
               <h3>Nyahururu Branch</h3>
-              <p>
-                <i
+              <p id="branch-p">
+                <a href="https://maps.app.goo.gl/G5n4P1dZWnE2j29LA"><i
                   class="fas fa-map-marker-alt"
                   style="color: var(--primary); margin-right: 8px"
                 ></i>
-                Solana Junction, Nyahururu
+                Solana Junction, Nyahururu</a>
               </p>
-              <p>
+              <p id="branch-p">
                 <i
                   class="fas fa-phone"
                   style="color: var(--primary); margin-right: 8px"
@@ -294,7 +389,7 @@
     <!-- Map Section -->
     <section class="section">
       <div class="container">
-        <h2 class="section-titles">Find Us</h2>
+        <h1 class="section-titles">Find Us</h1>
         <div class="map-container">
           <div class="map-placeholder">
             <!-- <i class="fas fa-map-marked-alt"></i>
@@ -318,7 +413,7 @@
     <!-- FAQ Section -->
     <section class="section faq-section">
       <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <h1 class="section-title">Frequently Asked Questions</h1>
         <div class="faq-container">
           <div class="faq-item fade-in">
             <div class="faq-question">
@@ -395,17 +490,18 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section cta-section">
-      <div class="container">
+   <!-- CTA Section -->
+<section class="section cta-section">
+    <div class="container">
         <h2>Ready to Start Your Project?</h2>
         <p>
-          Contact us today for a free consultation and quote. Let's discuss how
-          we can bring your branding vision to life.
+            Contact Buni Brands Kenya today for a <strong>free consultation and quote</strong>. 
+            Let's discuss how we can bring your branding vision to life with our professional 
+            printing services across Nairobi, Machakos, and Nyahururu.
         </p>
-        <a href="#contact" class="btn">Get Free Consultation</a>
-      </div>
-    </section>
+        <a href="#contact" class="btn" aria-label="Get free consultation from Buni Brands Kenya">Get Free Kenyan Consultation</a>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -476,19 +572,19 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 Buni Brands. All Rights Reserved.</p>
+          <p>&copy; 2025 buniBrands. All Rights Reserved.</p>
           <p style="margin: 0; font-size: 13px; color: #777">
             Crafted with <span style="color: red">❤</span> by
             <a
               href="https://wa.me/254790256966?text=Hello%20there,%20I%20Need%20a%20Website"
               target="_blank"
               style="
-                color: rgba(0, 0, 255, 0.822);
+                color: gold;
                 text-decoration: none;
                 font-weight: 500;
               "
             >
-              BuniBrands
+              buniBrands
             </a>
           </p>
         </div>
