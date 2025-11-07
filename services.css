@@ -214,6 +214,7 @@ header.scrolled {
   font-size: 3rem;
   margin-bottom: 20px;
   animation: slideFromLeft 0.8s ease-out 0.3s both;
+  color: #e2b00d;
 }
 
 .page-hero p {
@@ -390,7 +391,15 @@ header.scrolled {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
+  
 }
+.process-timeline h3{
+  color: #e2b00d;
+}
+.process-timeline h2{
+  color: #e2b00d;
+}
+
 
 .process-timeline:before {
   content: "";
@@ -477,6 +486,7 @@ header.scrolled {
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
+  color: #e2b00d;
 }
 
 .cta-section p {
@@ -494,7 +504,7 @@ header.scrolled {
 
 /* Footer */
 footer {
-  background-color: var(--dark);
+  background-color: black;
   color: var(--light);
   padding: 60px 0 30px;
 }
@@ -516,7 +526,7 @@ footer {
   font-size: 1.2rem;
   margin-bottom: 20px;
   position: relative;
-  color: var(--light);
+  color: #e2b00d;
 }
 
 .footer-links h3:after,
@@ -593,7 +603,7 @@ footer {
   bottom: 30px;
   right: 30px;
   z-index: 999;
-  background: linear-gradient(135deg, var(--primary), var(--dark-red));
+  background: rgb(185, 6, 6);
   color: var(--light);
   padding: 15px 25px;
   border-radius: 50px;
@@ -638,11 +648,11 @@ footer {
 .hero-tagline {
         font-size: 1.5rem;
         margin-bottom: 25px;
-        color: var(--light-gray);
+        color: #e2b00d;
       }
 
       .hero-tagline span {
-        color: gold;
+        color: white;
         font-weight: 600;
       }
 
@@ -767,7 +777,7 @@ footer {
 }
  /* Logo Image Styles */
 .logo-image {
-  height: 200px;
+  height: 100px;
   width: auto;
   transition: all 0.3s ease;
   margin-left: -35px;
