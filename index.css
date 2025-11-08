@@ -244,6 +244,7 @@
       }
 
       .hero-content h1 {
+        font-family: 'Amonos', 'Anonymous Pro', monospace;
         font-size: 4rem;
         font-weight: 700;
         margin-bottom: 20px;
@@ -251,6 +252,7 @@
       }
 
       .hero-content h1 .highlight {
+        font-family: 'Amonos', 'Anonymous Pro', monospace;
         color: #e2b00d;
       }
 
@@ -554,6 +556,7 @@
       footer {
         background-color: black;
         padding: 60px 0 20px;
+        
       }
 
       .footer-content {
