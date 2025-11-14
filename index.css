@@ -341,6 +341,82 @@
     rgba(18, 18, 18, 0.082) 100%
   );
 }
+.reveal {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.highlight {
+  color: #f5c542; /* premium gold */
+  text-shadow: 0px 2px 10px rgba(245, 197, 66, 0.3);
+}
+
+
+.hero-title {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  
+}
+/* Premium Serif Font Like Your Reference */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&display=swap');
+
+/* Base Hero Title */
+.hero-title.serif {
+  font-family: "Cinzel", serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
+  /* Mix 1 + 2 → Bold + Elegant */
+  font-weight: 900; /* stronger presence */
+  
+  /* Mix 3 + 4 → spaced + tight */
+  letter-spacing: 0.5px;  /* slight spacing for elegance */
+  transform-origin: bottom; /* looks crisp when animating */
+
+  color: #ffffff;
+  line-height: 1.05;
+  opacity: 0;
+}
+
+/* Gold “Buni” */
+.brand-gold {
+  color: #f5c542;
+  letter-spacing: 0px; /* tighter for luxury feel */
+  font-weight: 900;
+}
+
+/* Mix 5 → Subtle Premium Fade-Up Animation */
+@keyframes fadeLift {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.98);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translateY(6px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate {
+  animation: fadeLift 1.4s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+
+
+
 
 /* Slide Indicators */
 .slide-indicators {
@@ -895,3 +971,14 @@
     height: 45px;
   }
 }
+ .typewriter-text {
+        display: inline-block;
+        overflow: hidden;
+        border-right: 3px solid var(--accent);
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+          color:var(--gold)
+      }
+ 

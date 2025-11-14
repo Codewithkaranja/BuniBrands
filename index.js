@@ -200,3 +200,44 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+ // Typewriter Effect
+      const typewriterElement = document.getElementById("typewriter");
+      const words = ["Create", "Brand", "Inspire"];
+      let wordIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typeSpeed = 100;
+
+      function typeWriter() {
+        const currentWord = words[wordIndex];
+
+        if (isDeleting) {
+          typewriterElement.textContent = currentWord.substring(
+            0,
+            charIndex - 1
+          );
+          charIndex--;
+          typeSpeed = 150;
+        } else {
+          typewriterElement.textContent = currentWord.substring(
+            0,
+            charIndex + 1
+          );
+          charIndex++;
+          typeSpeed = 300;
+        }
+
+        if (!isDeleting && charIndex === currentWord.length) {
+          isDeleting = true;
+          typeSpeed = 1000; // Pause at end of word
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          typeSpeed = 0; // Pause before starting next word
+        }
+
+        setTimeout(typeWriter, typeSpeed);
+      }
+
+      // Start typewriter effect
+      setTimeout(typeWriter, 2000);

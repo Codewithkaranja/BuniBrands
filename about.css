@@ -465,8 +465,8 @@ header.scrolled {
 
 /* CEO Section */
 .ceo-section {
-  background-color: var(--gray);
-  color: black;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.726);
 }
 
 .ceo-grid {
