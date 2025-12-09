@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Jost', sans-serif;
   line-height: 1.6;
   color: var(--light); /* Changed from dark to light for black background */
   background-color: var(--dark);
@@ -211,16 +211,17 @@ header.scrolled {
 }
 
 .page-hero h1 {
-  font-family: 'Amonos', 'Anonymous Pro', monospace;
+  font-family: 'jost', 'Anonymous Pro', monospace;
   font-size: 3rem;
   margin-bottom: 20px;
   animation: slideFromLeft 0.8s ease-out 0.3s both;
   color: #e2b00d;
+  font-weight: 400;
 }
 
 .page-hero p {
   font-size: 1.2rem;
-  max-width: 600px;
+  max-width: 400px;
   margin: 0 auto;
   animation: slideFromRight 0.8s ease-out 0.6s both;
 }
@@ -326,9 +327,9 @@ header.scrolled {
   padding: 15px 25px;
   background: none;
   border: none;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Jost', sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: var(--transition);
   position: relative;

@@ -1,165 +1,196 @@
- // Mobile Navigation Toggle
-      const hamburger = document.querySelector(".hamburger");
-      const navLinks = document.querySelector(".nav-links");
+/* ============================================================
+   MOBILE NAVIGATION
+============================================================ */
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-      hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        hamburger.innerHTML = navLinks.classList.contains("active")
-          ? '<i class="fas fa-times"></i>'
-          : '<i class="fas fa-bars"></i>';
-      });
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    hamburger.innerHTML = navLinks.classList.contains("active")
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+}
 
-      // Header Scroll Effect
-      window.addEventListener("scroll", () => {
-        const header = document.getElementById("header");
-        if (window.scrollY > 100) {
-          header.classList.add("scrolled");
-        } else {
-          header.classList.remove("scrolled");
-        }
-      });
+/* ============================================================
+   HEADER SCROLL EFFECT
+============================================================ */
+window.addEventListener("scroll", () => {
+  const header = document.getElementById("header");
+  if (!header) return;
 
-      // Testimonial Slider
-      const testimonialSlides = document.querySelectorAll(".testimonial-slide");
-      const dots = document.querySelectorAll(".slider-dot");
-      const prevBtn = document.querySelector(".slider-prev");
-      const nextBtn = document.querySelector(".slider-next");
-      let currentSlide = 0;
+  window.scrollY > 100
+    ? header.classList.add("scrolled")
+    : header.classList.remove("scrolled");
+});
 
-      function showSlide(n) {
-        testimonialSlides.forEach((slide) => slide.classList.remove("active"));
-        dots.forEach((dot) => dot.classList.remove("active"));
+/* ============================================================
+   TESTIMONIAL SLIDER (Custom)
+============================================================ */
+const testimonialSlides = document.querySelectorAll(".testimonial-slide");
+const dots = document.querySelectorAll(".slider-dot");
+const prevBtn = document.querySelector(".slider-prev");
+const nextBtn = document.querySelector(".slider-next");
 
-        currentSlide =
-          (n + testimonialSlides.length) % testimonialSlides.length;
+let currentSlide = 0;
 
-        testimonialSlides[currentSlide].classList.add("active");
-        dots[currentSlide].classList.add("active");
-      }
+function showSlide(n) {
+  if (!testimonialSlides.length) return;
 
-      dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-          showSlide(index);
-        });
-      });
+  testimonialSlides.forEach((slide) => slide.classList.remove("active"));
+  dots.forEach((dot) => dot.classList.remove("active"));
 
-      prevBtn.addEventListener("click", () => {
-        showSlide(currentSlide - 1);
-      });
+  currentSlide = (n + testimonialSlides.length) % testimonialSlides.length;
 
-      nextBtn.addEventListener("click", () => {
-        showSlide(currentSlide + 1);
-      });
+  testimonialSlides[currentSlide].classList.add("active");
+  dots[currentSlide].classList.add("active");
+}
 
-      // Auto slide testimonials
-      setInterval(() => {
-        showSlide(currentSlide + 1);
-      }, 5000);
+// Dot Navigation
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => showSlide(index));
+});
 
-      // Fade In Animation on Scroll
-      const fadeElements = document.querySelectorAll(".fade-in");
+// Prev/Next
+if (prevBtn) prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
+if (nextBtn) nextBtn.addEventListener("click", () => showSlide(currentSlide + 1));
 
-      function checkFade() {
-        fadeElements.forEach((element) => {
-          const elementTop = element.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
+// Auto Slide
+setInterval(() => {
+  showSlide(currentSlide + 1);
+}, 5000);
 
-          if (elementTop < windowHeight - 100) {
-            element.classList.add("visible");
-          }
-        });
-      }
+/* ============================================================
+   FADE-IN ANIMATION ON SCROLL
+============================================================ */
+const fadeElements = document.querySelectorAll(".fade-in");
 
-      window.addEventListener("scroll", checkFade);
-      window.addEventListener("load", checkFade);
-// Testimonial Hero Animations
-function createTestimonialParticles() {
-  const particlesContainer = document.createElement('div');
-  particlesContainer.className = 'testimonial-particles';
-  const pageHero = document.querySelector('.page-hero');
-  if (pageHero) {
-    pageHero.appendChild(particlesContainer);
-
-    for (let i = 0; i < 30; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'testimonial-particle';
-      
-      const size = Math.random() * 3 + 1;
-      const posX = Math.random() * 100;
-      const posY = Math.random() * 100;
-      const delay = Math.random() * 8;
-      
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-      particle.style.left = `${posX}%`;
-      particle.style.top = `${posY}%`;
-      particle.style.animationDelay = `${delay}s`;
-      
-      particlesContainer.appendChild(particle);
+function checkFade() {
+  fadeElements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    if (elementTop < window.innerHeight - 100) {
+      element.classList.add("visible");
     }
+  });
+}
+
+window.addEventListener("scroll", checkFade);
+window.addEventListener("load", checkFade);
+
+/* ============================================================
+   TESTIMONIAL PARTICLES (Decorative Hero Animation)
+============================================================ */
+function createTestimonialParticles() {
+  const pageHero = document.querySelector('.page-hero');
+  if (!pageHero) return;
+
+  const container = document.createElement('div');
+  container.className = 'testimonial-particles';
+  pageHero.appendChild(container);
+
+  for (let i = 0; i < 30; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'testimonial-particle';
+
+    particle.style.width = particle.style.height = `${Math.random() * 3 + 1}px`;
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.top = `${Math.random() * 100}%`;
+    particle.style.animationDelay = `${Math.random() * 8}s`;
+
+    container.appendChild(particle);
   }
 }
 
-// Animated Counter for Trust Indicators
+/* ============================================================
+   TRUST COUNTERS (Animated Numbers)
+============================================================ */
 function animateTrustCounters() {
   const counters = document.querySelectorAll('.trust-number');
-  
+
   counters.forEach(counter => {
     const target = parseInt(counter.getAttribute('data-count'));
+    if (!target) return;
+
+    let current = 0;
     const duration = 2000;
     const step = target / (duration / 16);
-    let current = 0;
-    
+
     const timer = setInterval(() => {
       current += step;
+      counter.textContent = Math.floor(current);
+
       if (current >= target) {
-        current = target;
+        counter.textContent = target;
         clearInterval(timer);
       }
-      counter.textContent = Math.floor(current);
     }, 16);
   });
 }
 
-// Initialize testimonial hero animations
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize Hero Effects
+document.addEventListener('DOMContentLoaded', () => {
   createTestimonialParticles();
-  
-  // Animate trust counters when hero section is in view
-  const heroObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateTrustCounters();
-        heroObserver.unobserve(entry.target);
-      }
-    });
-  });
-  
+
   const heroSection = document.querySelector('.page-hero');
   if (heroSection) {
-    heroObserver.observe(heroSection);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateTrustCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+    observer.observe(heroSection);
   }
 });
-      // Smooth Scrolling for Anchor Links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
 
-          const targetId = this.getAttribute("href");
-          if (targetId === "#") return;
+/* ============================================================
+   SMOOTH SCROLLING (Anchors)
+============================================================ */
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (e) => {
+    e.preventDefault();
 
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 80,
-              behavior: "smooth",
-            });
+    const targetId = anchor.getAttribute("href");
+    if (targetId === "#") return;
 
-            // Close mobile menu if open
-            if (navLinks.classList.contains("active")) {
-              navLinks.classList.remove("active");
-              hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-          }
-        });
-      });
+    const target = document.querySelector(targetId);
+    if (!target) return;
+
+    window.scrollTo({
+      top: target.offsetTop - 80,
+      behavior: "smooth",
+    });
+
+    // Close mobile nav
+    if (navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+      hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+  });
+});
+
+/* ============================================================
+   CLIENT LOGOS SWIPER SLIDER
+============================================================ */
+var swiper = new Swiper(".clientsSwiper", {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: { slidesPerView: 2 },
+    640: { slidesPerView: 3 },
+    768: { slidesPerView: 4 },
+    1024: { slidesPerView: 5 },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
