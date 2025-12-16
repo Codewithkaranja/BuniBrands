@@ -244,9 +244,9 @@
       }
 
       .hero-content h1 {
-    font-family: "Cormorant Garamond", sans-serif;
+    font-family: "jost", sans-serif;
     font-size: 4.5rem;
-    font-weight: 900;
+    font-weight: 400;
     margin-bottom: 24px;
     color:white;
     line-height: 1.04;
@@ -258,8 +258,8 @@
 
 
       .hero-content h1 .highlight {
-        font-family:cursive;
-        color: #e2b00d;
+        font-family:'jost', sans-serif;
+        color: white;
         font-weight: 400;
       }
 
@@ -271,7 +271,7 @@
 
       .hero-tagline span {
         color: #e2b00d;
-        font-weight: 600;
+        font-weight: 400;
       }
 
       .hero-desc {
@@ -283,7 +283,7 @@
 
       .hero-desc .accent {
         color: #e2b00d;
-        font-weight: 600;
+        font-weight: 300;
       }
 
       .hero-buttons {
@@ -981,6 +981,7 @@
 }
  .typewriter-text {
         display: inline-block;
+        font-weight: 300;
         overflow: hidden;
         border-right: 3px solid var(--accent);
         white-space: nowrap;
@@ -988,5 +989,7 @@
         animation: typing 3.5s steps(40, end),
           blink-caret 0.75s step-end infinite;
           color:var(--gold)
+          
+          
       }
  
